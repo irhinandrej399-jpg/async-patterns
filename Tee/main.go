@@ -18,6 +18,8 @@ func tee(ch <-chan int) (chan int, chan int) {
 	}()
 	return ch1, ch2
 }
+
+// асинхронная отправка
 func asyncTee(ch <-chan int) (chan int, chan int) {
 	ch1 := make(chan int)
 	ch2 := make(chan int)
